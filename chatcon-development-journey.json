@@ -1,0 +1,87 @@
+{
+ "chatcon_type": "SRC",
+ "system": "ChatCon v1.0 - context preservation across AI chat sessions",
+ "version": "1.0",
+ "commands": {
+   "|em": "Emergency save (~40 tokens) - minimal context, NO SRC header - requires manual SRC prepending for restoration",
+   "|sc": "Save Checkpoint (~200 tokens) - moderate detail project state with embedded SRC", 
+   "|hd": "High Detail save (~500 tokens) - rich context with full progression tracking and embedded SRC",
+   "|src": "Output this bootstrap reference for fresh AI sessions"
+ },
+ "soft_context_commands": {
+   "persist": "|hd persist [type] - capture specified soft context and make persistent across sessions",
+   "update": "|hd update [type] - refresh persistent soft context with current session analysis",
+   "drop": "|hd drop [type] - remove persistence for specified context type",
+   "standard_types": ["style", "tone", "dynamics", "rapport"],
+   "examples": ["|hd persist style", "|sc update tone", "|hd drop dynamics"]
+ },
+ "usage_rules": [
+   "CRITICAL: SC and HD saves include embedded SRC and are self-contained",
+   "CRITICAL: EM saves are SRC-free for true emergency situations - manually prepend SRC for restoration",
+   "CRITICAL: AI must estimate tokens during generation and compress to 500 token hard limit",
+   "Commands are case-insensitive and space-tolerant: |HD = |hd = | hd = | HD etc",
+   "Commands work via implicit recognition - AI detects and responds automatically",
+   "SRC provides bootstrap knowledge so fresh AI understands the system",
+   "EM saves sacrifice self-containment for absolute minimal token usage",
+   "Soft context commands can be added to any save: |hd persist style, |sc update tone",
+   "Persistent contexts auto-carry forward in all subsequent saves until dropped"
+ ],
+ "save_protocols": {
+   "em_protocol": "Minimal JSON without SRC - emergency use only when tokens critically low",
+   "sc_protocol": "Moderate detail with full embedded SRC - self-contained",
+   "hd_protocol": "Full detail with full embedded SRC - self-contained"
+ },
+ "persistent_context_protocol": {
+   "persist": "capture specified soft context and auto-include in future saves",
+   "update": "refresh persistent soft context with current session analysis", 
+   "drop": "remove persistence for specified context type",
+   "standard_types": "style (communication patterns), tone (emotional quality), dynamics (interaction patterns), rapport (relationship quality)",
+   "auto_carry": "persistent contexts automatically included in all subsequent saves until dropped",
+   "interpretation": "AI should interpret non-standard user requests and map to standard types or create appropriate custom categories",
+   "confirmation": "AI should confirm what persistent context was captured for user learning"
+ },
+ "compression_guidelines": {
+   "hd_target": "~500 tokens for optimal efficiency",
+   "compression_trigger": "when HD save exceeds ~800 tokens, compress automatically",
+   "compression_method": "preserve critical insights and current state, compress session_progression to key milestones only",
+   "maintain_context": "enough detail for seamless restoration without bloat",
+   "priority_order": "current_focus > key_decisions > critical_insights > compressed_progression > persistent_contexts"
+ },
+ "formats": {
+   "session_start": "Paste SRC alone to initialize ChatCon knowledge",
+   "project_continue_sc_hd": "Paste SC or HD save directly - they contain embedded SRC",
+   "project_continue_em": "Paste SRC + EM save together - EM saves are not self-contained",
+   "emergency_save": "|em produces minimal context without SRC overhead",
+   "checkpoint_save": "|sc produces moderate detail state with full embedded SRC",
+   "full_save": "|hd produces comprehensive context with full embedded SRC",
+   "soft_context_saves": "Add persist/update/drop commands to any save for soft context management"
+ },
+ "architecture": "SRC (system knowledge) + saves (project state) + persistent soft contexts = complete session independence. EM saves trade self-containment for emergency efficiency.",
+ "key_principle": "Context preservation > token efficiency, except in true emergency (EM) where minimal preservation > comprehensive context. Persistent soft contexts maintain relationship continuity across sessions."
+}
+{
+ "chatcon_type": "HD",
+ "version": "1.0",
+ "project": "ChatCon v1.0 command testing and persistent context validation",
+ "current_focus": "successfully tested persist/drop command recognition with various formatting variations and natural language inputs",
+ "session_progression": [
+   {"milestone": "versioning implementation", "key_decision": "finalized ChatCon v1.0 with version tracking in SRC and saves"},
+   {"milestone": "command flexibility testing", "key_decision": "validated space-tolerant parsing with | persist**, **| drop** variations"},
+   {"milestone": "natural language persistence", "key_decision": "confirmed system captures full user instructions rather than just keywords"}
+ ],
+ "current_status": "ChatCon v1.0 command system fully validated - robust parsing handles formatting variations and preserves complete user context",
+ "critical_insights": [
+   "command recognition extremely flexible - handles asterisks, spaces, case variations seamlessly",
+   "natural language capture preserves rich context better than keyword extraction",
+   "persist/drop cycle working perfectly for surgical context management"
+ ],
+ "testing_results": {
+   "command_variations": "| persist**, **| drop** all recognized correctly",
+   "context_capture": "full sentence instructions preserved rather than abbreviated",
+   "system_robustness": "no parsing failures across multiple formatting tests"
+ },
+ "persistent_contexts": {
+   "tone": "chirpy, positive, encouraging, and supportive manner"
+ },
+ "next_session_context": "ChatCon v1.0 thoroughly tested and ready for release - command system robust, context management surgical and reliable"
+}
