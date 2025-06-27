@@ -1,0 +1,67 @@
+{
+  "chatcon_type": "SRC",
+  "system": "ChatCon v1.0 - context preservation across AI chat sessions",
+  "version": "1.0",
+  "commands": {
+    "~em": "Emergency save (~40 tokens) - minimal context, NO SRC header - requires manual SRC prepending for restoration",
+    "~sc": "Save Checkpoint (~200 tokens) - moderate detail project state with embedded SRC", 
+    "~hd": "High Detail save (~500 tokens) - rich context with full progression tracking and embedded SRC",
+    "~src": "Output this bootstrap reference for fresh AI sessions"
+  },
+  "soft_context_commands": {
+    "persist": "~hd persist [type] - capture specified soft context and make persistent across sessions",
+    "update": "~hd update [type] - refresh persistent soft context with current session analysis",
+    "drop": "~hd drop [type] - remove persistence for specified context type",
+    "standard_types": ["style", "tone", "dynamics", "rapport"],
+    "examples": ["~hd persist style", "~sc update tone", "~hd drop dynamics"]
+  },
+  "usage_rules": [
+    "CRITICAL: SC and HD saves include embedded SRC and are self-contained",
+    "CRITICAL: EM saves are SRC-free for true emergency situations - manually prepend SRC for restoration",
+    "CRITICAL: AI must estimate tokens during generation and compress to 500 token hard limit",
+    "Commands are case-insensitive and space-tolerant: ~HD = ~hd = ~ hd = ~ HD etc",
+    "Commands work via implicit recognition - AI detects and responds automatically",
+    "SRC provides bootstrap knowledge so fresh AI understands the system",
+    "EM saves sacrifice self-containment for absolute minimal token usage",
+    "Soft context commands can be added to any save: ~hd persist style, ~sc update tone",
+    "Persistent contexts auto-carry forward in all subsequent saves until dropped"
+  ],
+  "project_state": {
+    "project": "dinosaur_curriculum_development",
+    "user_role": "5th_grade_teacher",
+    "primary_focus": "bird_dinosaur_evolutionary_connection",
+    "session_progression": {
+      "opening": "teacher_introduced_birds_as_dinosaurs_focus",
+      "evidence_discussion": "comprehensive_overview_bird_dinosaur_evidence",
+      "scientific_consensus": "confirmed_overwhelming_agreement_birds_are_dinosaurs",
+      "pedagogical_planning": "developed_6_step_evidence_building_sequence",
+      "current_status": "ready_for_activity_development"
+    },
+    "key_scientific_content": {
+      "fossil_evidence": ["archaeopteryx_transitional", "chinese_feathered_dinosaurs", "microraptor_sinosauropteryx"],
+      "anatomical_similarities": ["hollow_bones", "wishbone_furcula", "three_toed_feet", "hip_structure", "brain_structure"],
+      "behavioral_evidence": ["nesting_brooding", "oviraptor_egg_sitting"],
+      "modern_features_in_dinosaurs": ["feathers_for_warmth_display", "beaks", "air_sacs"],
+      "classification_status": "birds_are_avian_dinosaurs_scientific_consensus"
+    },
+    "teaching_strategy": {
+      "approach": "evidence_building_sequence",
+      "step1": "observe_living_birds_establish_baseline_features",
+      "step2": "dinosaur_skeleton_mystery_find_similarities",
+      "step3": "archaeopteryx_first_big_transitional_clue",
+      "step4": "feathered_dinosaurs_evidence_accumulation",
+      "step5": "behavioral_connections_nesting_evidence",
+      "step6": "revelation_birds_are_living_dinosaurs",
+      "pedagogical_principle": "each_step_builds_on_previous_logical_progression"
+    },
+    "next_development_priorities": [
+      "specific_hands_on_activities_per_step",
+      "visual_resources_identification",
+      "assessment_methods",
+      "cross_curricular_connections"
+    ],
+    "persistent_contexts": {
+      "tone": "simple_clear_explanations_respecting_student_intelligence_no_talking_down_open_encouraging_approach"
+    }
+  }
+}

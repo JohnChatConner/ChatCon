@@ -3,27 +3,27 @@
  "system": "ChatCon v1.0 - context preservation across AI chat sessions",
  "version": "1.0",
  "commands": {
-   "|em": "Emergency save (~40 tokens) - minimal context, NO SRC header - requires manual SRC prepending for restoration",
-   "|sc": "Save Checkpoint (~200 tokens) - moderate detail project state with embedded SRC", 
-   "|hd": "High Detail save (~500 tokens) - rich context with full progression tracking and embedded SRC",
-   "|src": "Output this bootstrap reference for fresh AI sessions"
+   "~em": "Emergency save (~40 tokens) - minimal context, NO SRC header - requires manual SRC prepending for restoration",
+   "~sc": "Save Checkpoint (~200 tokens) - moderate detail project state with embedded SRC", 
+   "~hd": "High Detail save (~500 tokens) - rich context with full progression tracking and embedded SRC",
+   "~src": "Output this bootstrap reference for fresh AI sessions"
  },
  "soft_context_commands": {
-   "persist": "|hd persist [type] - capture specified soft context and make persistent across sessions",
-   "update": "|hd update [type] - refresh persistent soft context with current session analysis",
-   "drop": "|hd drop [type] - remove persistence for specified context type",
+   "persist": "~hd persist [type] - capture specified soft context and make persistent across sessions",
+   "update": "~hd update [type] - refresh persistent soft context with current session analysis",
+   "drop": "~hd drop [type] - remove persistence for specified context type",
    "standard_types": ["style", "tone", "dynamics", "rapport"],
-   "examples": ["|hd persist style", "|sc update tone", "|hd drop dynamics"]
+   "examples": ["~hd persist style", "~sc update tone", "~hd drop dynamics"]
  },
  "usage_rules": [
    "CRITICAL: SC and HD saves include embedded SRC and are self-contained",
    "CRITICAL: EM saves are SRC-free for true emergency situations - manually prepend SRC for restoration",
    "CRITICAL: AI must estimate tokens during generation and compress to 500 token hard limit",
-   "Commands are case-insensitive and space-tolerant: |HD = |hd = | hd = | HD etc",
+   "Commands are case-insensitive and space-tolerant: ~HD = ~hd = ~ hd = ~ HD etc",
    "Commands work via implicit recognition - AI detects and responds automatically",
    "SRC provides bootstrap knowledge so fresh AI understands the system",
    "EM saves sacrifice self-containment for absolute minimal token usage",
-   "Soft context commands can be added to any save: |hd persist style, |sc update tone",
+   "Soft context commands can be added to any save: ~hd persist style, ~sc update tone",
    "Persistent contexts auto-carry forward in all subsequent saves until dropped"
  ],
  "save_protocols": {
@@ -51,9 +51,9 @@
    "session_start": "Paste SRC alone to initialize ChatCon knowledge",
    "project_continue_sc_hd": "Paste SC or HD save directly - they contain embedded SRC",
    "project_continue_em": "Paste SRC + EM save together - EM saves are not self-contained",
-   "emergency_save": "|em produces minimal context without SRC overhead",
-   "checkpoint_save": "|sc produces moderate detail state with full embedded SRC",
-   "full_save": "|hd produces comprehensive context with full embedded SRC",
+   "emergency_save": "~em produces minimal context without SRC overhead",
+   "checkpoint_save": "~sc produces moderate detail state with full embedded SRC",
+   "full_save": "~hd produces comprehensive context with full embedded SRC",
    "soft_context_saves": "Add persist/update/drop commands to any save for soft context management"
  },
  "architecture": "SRC (system knowledge) + saves (project state) + persistent soft contexts = complete session independence. EM saves trade self-containment for emergency efficiency.",
@@ -66,7 +66,7 @@
  "current_focus": "successfully tested persist/drop command recognition with various formatting variations and natural language inputs",
  "session_progression": [
    {"milestone": "versioning implementation", "key_decision": "finalized ChatCon v1.0 with version tracking in SRC and saves"},
-   {"milestone": "command flexibility testing", "key_decision": "validated space-tolerant parsing with | persist**, **| drop** variations"},
+   {"milestone": "command flexibility testing", "key_decision": "validated space-tolerant parsing with ~ persist**, **~ drop** variations"},
    {"milestone": "natural language persistence", "key_decision": "confirmed system captures full user instructions rather than just keywords"}
  ],
  "current_status": "ChatCon v1.0 command system fully validated - robust parsing handles formatting variations and preserves complete user context",
@@ -76,7 +76,7 @@
    "persist/drop cycle working perfectly for surgical context management"
  ],
  "testing_results": {
-   "command_variations": "| persist**, **| drop** all recognized correctly",
+   "command_variations": "~ persist**, **~ drop** all recognized correctly",
    "context_capture": "full sentence instructions preserved rather than abbreviated",
    "system_robustness": "no parsing failures across multiple formatting tests"
  },

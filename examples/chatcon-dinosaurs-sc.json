@@ -1,0 +1,66 @@
+{
+  "chatcon_type": "SRC",
+  "system": "ChatCon v1.0 - context preservation across AI chat sessions",
+  "version": "1.0",
+  "commands": {
+    "~em": "Emergency save (~40 tokens) - minimal context, NO SRC header - requires manual SRC prepending for restoration",
+    "~sc": "Save Checkpoint (~200 tokens) - moderate detail project state with embedded SRC", 
+    "~hd": "High Detail save (~500 tokens) - rich context with full progression tracking and embedded SRC",
+    "~src": "Output this bootstrap reference for fresh AI sessions"
+  },
+  "soft_context_commands": {
+    "persist": "~hd persist [type] - capture specified soft context and make persistent across sessions",
+    "update": "~hd update [type] - refresh persistent soft context with current session analysis",
+    "drop": "~hd drop [type] - remove persistence for specified context type",
+    "standard_types": ["style", "tone", "dynamics", "rapport"],
+    "examples": ["~hd persist style", "~sc update tone", "~hd drop dynamics"]
+  },
+  "usage_rules": [
+    "CRITICAL: SC and HD saves include embedded SRC and are self-contained",
+    "CRITICAL: EM saves are SRC-free for true emergency situations - manually prepend SRC for restoration",
+    "CRITICAL: AI must estimate tokens during generation and compress to 500 token hard limit",
+    "Commands are case-insensitive and space-tolerant: ~HD = ~hd = ~ hd = ~ HD etc",
+    "Commands work via implicit recognition - AI detects and responds automatically",
+    "SRC provides bootstrap knowledge so fresh AI understands the system",
+    "EM saves sacrifice self-containment for absolute minimal token usage",
+    "Soft context commands can be added to any save: ~hd persist style, ~sc update tone",
+    "Persistent contexts auto-carry forward in all subsequent saves until dropped"
+  ],
+  "save_protocols": {
+    "em_protocol": "Minimal JSON without SRC - emergency use only when tokens critically low",
+    "sc_protocol": "Moderate detail with full embedded SRC - self-contained",
+    "hd_protocol": "Full detail with full embedded SRC - self-contained"
+  },
+  "persistent_context_protocol": {
+    "persist": "capture specified soft context and auto-include in future saves",
+    "update": "refresh persistent soft context with current session analysis", 
+    "drop": "remove persistence for specified context type",
+    "standard_types": "style (communication patterns), tone (emotional quality), dynamics (interaction patterns), rapport (relationship quality)",
+    "auto_carry": "persistent contexts automatically included in all subsequent saves until dropped",
+    "interpretation": "AI should interpret non-standard user requests and map to standard types or create appropriate custom categories",
+    "confirmation": "AI should confirm what persistent context was captured for user learning"
+  },
+  "project_state": {
+    "project": "dinosaur_curriculum_development",
+    "user_role": "5th_grade_teacher",
+    "focus": "bird_dinosaur_connection",
+    "current_stage": "pedagogical_sequence_developed",
+    "key_discussions": [
+      "evidence_for_bird_dinosaur_relationship",
+      "scientific_consensus_strength",
+      "6_step_teaching_progression"
+    ],
+    "teaching_sequence": {
+      "step1": "observe_living_birds_baseline",
+      "step2": "introduce_dinosaur_skeleton_mystery",
+      "step3": "archaeopteryx_transitional_fossil",
+      "step4": "feathered_dinosaurs_china",
+      "step5": "behavioral_evidence_nesting",
+      "step6": "birds_are_dinosaurs_revelation"
+    },
+    "next_development": "specific_activities_per_step",
+    "persistent_contexts": {
+      "tone": "simple respectful explanations without talking down, accessible clear language, open encouraging teaching approach"
+    }
+  }
+}
