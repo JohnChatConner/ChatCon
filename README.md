@@ -39,7 +39,7 @@ The AI doesn't need special instructions because it reads it's own JSON notes an
 - **High Detail (`~hd`):** Comprehensive save with full progression tracking. Can get large but includes automatic compression when it exceeds around 800 tokens. Also includes the embedded system prompt.
 
 ## Context Management
-ChatCon lets you persist specific types of context across sessions:
+Besides creating a save file, ChatCon also lets you persist specific types of context across sessions:
 ```
 ~persist tone: Keep responses concise and technical
 ~persist role: You're a senior developer, I'm learning
