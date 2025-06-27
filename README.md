@@ -20,28 +20,6 @@ After issuing a save command, the AI outputs a JSON "save" block, kind of like a
 
 [📹 View Demo Video](https://github.com/user-attachments/assets/4fea4a54-6a88-4a0f-8b01-0fd66e13b164)
 
-<div align="center">
-  <h3>
-    <a href="https://github.com/user-attachments/assets/4fea4a54-6a88-4a0f-8b01-0fd66e13b164">📹 View Demo Video</a>
-  </h3>
-</div>
-
-<div align="center">
-  <a href="https://github.com/user-attachments/assets/4fea4a54-6a88-4a0f-8b01-0fd66e13b164">
-    <img src="https://img.shields.io/badge/📹-Demo%20Video-blue?style=for-the-badge" alt="Demo Video">
-  </a>
-</div>
-
-<p align="center">
-  <a href="https://github.com/user-attachments/assets/4fea4a54-6a88-4a0f-8b01-0fd66e13b164">📹 View Demo Video</a>
-</p>
-
-<div align="center">
-  <a href="https://github.com/user-attachments/assets/4fea4a54-6a88-4a0f-8b01-0fd66e13b164">📹 View Demo Video</a>
-</div>
-
-
-
 ## Quick Start
 
 1. **Start a new chat:** Paste the ChatCon source block (see `chatcon-src-v1.0.json`) into the chat window
