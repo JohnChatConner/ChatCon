@@ -20,6 +20,11 @@ After issuing a save command, the AI outputs a JSON "save" block, kind of like a
 
 [📹 View Demo Video](https://github.com/user-attachments/assets/4fea4a54-6a88-4a0f-8b01-0fd66e13b164)
 
+
+<div align="center">
+  <a href="https://github.com/user-attachments/assets/4fea4a54-6a88-4a0f-8b01-0fd66e13b164">📹 View Demo Video</a>
+</div>
+
 <video width="600" controls>
   <source src="https://github.com/user-attachments/assets/4fea4a54-6a88-4a0f-8b01-0fd66e13b164" type="video/mp4">
   Your browser does not support the video tag.
