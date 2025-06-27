@@ -18,19 +18,9 @@ When you're ready to wrap up a session, you trigger a save command:
 
 After issuing a save command, the AI outputs a JSON "save" block, kind of like a game's "save file." Copy that save output, paste it into your next chat, and the AI picks up exactly where you left off.
 
-[📹 View Demo Video](https://github.com/user-attachments/assets/4fea4a54-6a88-4a0f-8b01-0fd66e13b164)
-
-
 <div align="center">
-  <a href="https://github.com/user-attachments/assets/4fea4a54-6a88-4a0f-8b01-0fd66e13b164">📹 View Demo Video</a>
+[📹 View Demo Video](https://github.com/user-attachments/assets/4fea4a54-6a88-4a0f-8b01-0fd66e13b164)
 </div>
-
-<video width="600" controls>
-  <source src="https://github.com/user-attachments/assets/4fea4a54-6a88-4a0f-8b01-0fd66e13b164" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-
 
 ## Quick Start
 
