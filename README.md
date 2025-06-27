@@ -19,8 +19,7 @@ When you're ready to wrap up a session, you trigger a save command:
 After issuing a save command, the AI outputs a JSON "save" block, kind of like a game's "save file." Copy that save output, paste it into your next chat, and the AI picks up exactly where you left off.
 
 <video width="600" controls>
-  <source src="assets/ChatCon_demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
+  <source src="https://github.com/JohnChatConner/ChatCon/releases/tag/demo-video" type="video/mp4">
 </video>
 
 ## Quick Start
