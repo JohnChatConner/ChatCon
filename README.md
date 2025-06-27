@@ -21,10 +21,9 @@ After issuing a save command, the AI outputs a JSON "save" block, kind of like a
 [📹 View Demo Video](https://github.com/JohnChatConner/ChatCon/releases/tag/demo-video.mp4)
 
 <video width="600" controls>
-  <source src="https://github.com/JohnChatConner/ChatCon/releases/tag/demo-video.mp4" type="video/mp4">
-  <a href="https://github.com/JohnChatConner/ChatCon/releases/tag/demo-video.mp4">View Demo Video</a>
+  <source src="https://github.com/user-attachments/assets/4fea4a54-6a88-4a0f-8b01-0fd66e13b164" type="video/mp4">
+  Your browser does not support the video tag.
 </video>
-
 
 
 
