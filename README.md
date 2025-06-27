@@ -64,11 +64,16 @@ Emergency saves are genuinely minimal. If you're relying on them regularly, you'
 ## FAQ
 **Q: Does this work with [my AI assistant]?**
 If it can parse JSON and follow instructions, probably. Tested extensively with Claude and ChatGPT.
+
 **Q: How much overhead does this add?**
 The source block takes up around 300 tokens. Save checkpoints are around 200 tokens. It's overhead, but it's usually worth it for non-trivial conversations.
+
 **Q: Can I automate this?**
 For now, the system is designed for manual triggers. Automating save generation would be possible but isn't built in.
+
 **Q: What if I forget to save?**
 You lose context, same as always. ChatCon doesn't solve the fundamental problem of remembering to save, it just makes saving and restoring much more effective when you do it.
+
 ---
+
 ChatCon is a tool, not magic. It won't make AIs remember everything perfectly, but it will give you much better continuity than starting from scratch every time you hit a token limit.
