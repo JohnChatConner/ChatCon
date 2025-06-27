@@ -12,9 +12,9 @@ Sure, you could manually summarize what happened, but that's error-prone and eat
 ## How ChatCon Works
 ChatCon is self-documenting; the AI figures out how to use it just by reading the system prompt. You paste a JSON block into a new chat, and the AI understands it should start taking notes.
 When you're ready to wrap up a session, you trigger a save command:
-- `~em` - Emergency save (~40 tokens) when you're almost out
-- `~sc` - Save checkpoint (~200 tokens) for moderate detail
-- `~hd` - High detail save (~500 tokens) for comprehensive context
+- `~em` - Emergency save (around 40 tokens) when you're almost out
+- `~sc` - Save checkpoint (around 200 tokens) for moderate detail
+- `~hd` - High detail save (around 500 tokens) for comprehensive context
 Copy that save output, paste it into your next chat, and the AI picks up exactly where you left off.
 
 ## Quick Start
