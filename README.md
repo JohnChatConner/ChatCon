@@ -78,7 +78,7 @@ Emergency saves are genuinely minimal. If you're relying on them regularly, you'
 If it can parse JSON and follow instructions, probably. Tested extensively with Claude and ChatGPT.
 
 **Q: How much overhead does this add?**
-The source block takes up around 300 tokens. Save checkpoints are around 200 tokens. It's overhead, but it's usually worth it for non-trivial conversations.
+The source block uses around 300 tokens. Save checkpoints are around 200 tokens. It's overhead, but it's usually worth it for non-trivial conversations.
 
 **Q: Can I automate this?**
 For now, the system is designed for manual triggers. Automating save generation would be possible but isn't built in.
