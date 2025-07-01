@@ -1,0 +1,37 @@
+site_name: ChatCon
+site_description: A meta-prompt designed to maintain continuity between sessions.
+site_author: JohnChatConner
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - What Does ChatCon Do?: what does chatcon do.md
+  - Creating Save Files: creating save files.md
+  - How To Use The ChatCon System: how to use chatcon.md
+  - Making It Your Own: making it your own.md
+  - Cool Things To Do With ChatCon: cool things.md
+  - How To Contribute To ChatCon: how to contribute.md
+  - Credits: credits.md
+  
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+
+plugins:
+  - search

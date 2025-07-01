@@ -1,7 +1,7 @@
 {
  "chatcon_type": "SRC",
- "system": "ChatCon v1.0 - context preservation across AI chat sessions",
- "version": "1.0",
+ "system": "ChatCon v0.5 - context preservation across AI chat sessions",
+ "version": "0.5",
  "commands": {
    "~em": "Emergency save (~40 tokens) - minimal context, NO SRC header - requires manual SRC prepending for restoration",
    "~sc": "Save Checkpoint (~200 tokens) - moderate detail project state with embedded SRC", 

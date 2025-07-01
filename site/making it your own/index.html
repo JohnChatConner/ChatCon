@@ -1,0 +1,974 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A meta-prompt designed to maintain continuity between sessions.">
+      
+      
+        <meta name="author" content="JohnChatConner">
+      
+      
+      
+        <link rel="prev" href="../how%20to%20use%20chatcon/">
+      
+      
+        <link rel="next" href="../cool%20things/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Making It Your Own - ChatCon</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#making-it-your-own" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ChatCon" class="md-header__button md-logo" aria-label="ChatCon" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ChatCon
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Making It Your Own
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ChatCon" class="md-nav__button md-logo" aria-label="ChatCon" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ChatCon
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what%20does%20chatcon%20do/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What Does ChatCon Do?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creating%20save%20files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creating Save Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how%20to%20use%20chatcon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How To Use The ChatCon System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Making It Your Own
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Making It Your Own
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#making-it-your-own" class="md-nav__link">
+    <span class="md-ellipsis">
+      Making it your own
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Making it your own">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#managing-contexts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing contexts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Context examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#role-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role definitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domain-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methodology-preferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methodology preferences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expertise-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expertise level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication style
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language-preferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language preferences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emotional-state-awareness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emotional state awareness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session_progression" class="md-nav__link">
+    <span class="md-ellipsis">
+      session_progression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key_technical_decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      key_technical_decisions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment_readiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      deployment_readiness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current_status" class="md-nav__link">
+    <span class="md-ellipsis">
+      current_status
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-define-a-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to define a context
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cool%20things/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cool Things To Do With ChatCon
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how%20to%20contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How To Contribute To ChatCon
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../credits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Credits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#making-it-your-own" class="md-nav__link">
+    <span class="md-ellipsis">
+      Making it your own
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Making it your own">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#managing-contexts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing contexts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Context examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#role-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role definitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domain-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methodology-preferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methodology preferences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expertise-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expertise level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication style
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language-preferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language preferences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emotional-state-awareness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emotional state awareness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session_progression" class="md-nav__link">
+    <span class="md-ellipsis">
+      session_progression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key_technical_decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      key_technical_decisions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment_readiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      deployment_readiness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current_status" class="md-nav__link">
+    <span class="md-ellipsis">
+      current_status
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-define-a-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to define a context
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Making It Your Own</h1>
+
+<h2 id="making-it-your-own">Making it your own<a class="headerlink" href="#making-it-your-own" title="Permanent link">&para;</a></h2>
+<p>In the <a href="../creating%20save%20files/#hd-high-detail-saves">HD (High Detail) Save</a> section in <a href="../creating%20save%20files/#hd-high-detail-save">Creating Save Files</a>, we discussed how ChatCon was initially designed to deal with continuity issues when developing software code. So the standard ChatCon source file comes "out of the box" containing only those instructions for contexts pertaining to the chat, subjects such as <code>current_focus</code>, <code>session_progression</code>, or <code>critical_insights</code>, for example. These are classified as contexts because they document the substance of the chat with the AI. With that in mind, the definition of "context" in ChatCon would be:</p>
+<blockquote>
+<p><strong>Context:</strong> <em>1. The part of a text or statement that surrounds a particular word or passage and determines its meaning. 2. The circumstances in which an event occurs; a setting.</em></p>
+</blockquote>
+<p>So it makes sense that, for example, <code>session_progression</code> is considered a basic context that should be permanently carried as you move through AI chat sessions.</p>
+<p>In ChatCon, there are three kinds of contexts:</p>
+<ul>
+<li>
+<p><strong>Basic contexts:</strong> We already discussed this one; <code>session_progression</code> is a basic context because it documents the progress of interactions between you and the AI.</p>
+</li>
+<li>
+<p><strong>Hard contexts:</strong> These are project or technical in nature and can include information such as role definitions, project constraints, domain knowledge, methodology preferences, output formats, or quality standards, for example.</p>
+</li>
+<li>
+<p><strong>Soft contexts:</strong> These are related to relationships, communication methods, or emotions, and they can include information on expertise level, communication style, language preferences, culture, accessibility needs, or emotional state awareness, for example.</p>
+</li>
+</ul>
+<h3 id="managing-contexts">Managing contexts<a class="headerlink" href="#managing-contexts" title="Permanent link">&para;</a></h3>
+<p>Because people use AI assistants for just about anything you can think of, establishing and retaining—or <em>persisting</em>, which is how it's referred to in ChatCon—is just as crucial to establishing and persisting a basic context like <code>session_progression</code>.</p>
+<p>In ChatCon you can manage contexts of all types using <em>context commands</em>. Below is a JSON example of the context commands you can invoke to permanently alter your ChatCon implementation:
+<div class="highlight"><pre><span></span><code>&quot;persistent_context_protocol&quot;: {
+    &quot;persist&quot;: &quot;capture specified soft context and auto-include in future saves&quot;,
+    &quot;update&quot;: &quot;refresh persistent soft context with current session analysis&quot;, 
+    &quot;drop&quot;: &quot;remove persistence for specified context type&quot;,
+    .
+    .
+    .
+}
+</code></pre></div></p>
+<p>These command triggers, which also use the tilde symbol, are a bit like those used for the save outputs. At any time you can invoke these commands in your chat to have the AI create, modify, or delete a context of any type. The commands are:</p>
+<ul>
+<li>
+<p><strong>~ persist:</strong> This command permanently writes a context into the source block. So generating a save output with <strong>~ SC</strong> or <strong>~ HD</strong> will include your new context, which will remain until you remove it.</p>
+<blockquote>
+<p>Remember that <strong>~ EM</strong>, the emergency save, doesn't generate and prepend a source output (.SRC) block, so a context change won't show up in a <strong>~ EM</strong> save because there's no source block to which to save the context. But generating a new source file with the command <strong>~ SRC</strong> will write out your new persisted context into that new source block.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>~ update:</strong> This command changes an existing context to that which you define in the command.</p>
+</li>
+<li>
+<p><strong>~ drop:</strong> This command removes an existing context.</p>
+</li>
+</ul>
+<blockquote>
+<p>Note: You can combine two commands together into a single line, like <code>~hd persist</code>. The AI isn't confused if you don't issue strict commands in a certain order or format.</p>
+</blockquote>
+<h3 id="context-examples">Context examples<a class="headerlink" href="#context-examples" title="Permanent link">&para;</a></h3>
+<p>This all can be a little confusing, so how about some examples? Let's start with some hard contexts:</p>
+<h4 id="role-definitions">Role definitions<a class="headerlink" href="#role-definitions" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>~ persist Roles: I&#39;m the product manager, you&#39;re the technical consultant.
+</code></pre></div>
+<h4 id="project-constraints">Project constraints<a class="headerlink" href="#project-constraints" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>~ update Project constraint: We now have a non-negotiable budget of $10,000.
+</code></pre></div>
+<h4 id="domain-knowledge">Domain knowledge<a class="headerlink" href="#domain-knowledge" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>~ persist Terminology: JSON means JavaScript Object Notation.
+</code></pre></div>
+<h4 id="methodology-preferences">Methodology preferences<a class="headerlink" href="#methodology-preferences" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>~ drop Methodology
+</code></pre></div>
+<p>And now for some soft context examples:</p>
+<h4 id="expertise-level">Expertise level<a class="headerlink" href="#expertise-level" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>~ persist Expertise: Assume expert knowledge
+</code></pre></div>
+<h4 id="communication-style">Communication style<a class="headerlink" href="#communication-style" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>~ drop Tone
+</code></pre></div>
+<h4 id="language-preferences">Language preferences<a class="headerlink" href="#language-preferences" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>~ update Language: Avoid jargon, use analogies, prefer bullet points vs prose.
+</code></pre></div>
+<h4 id="emotional-state-awareness">Emotional state awareness<a class="headerlink" href="#emotional-state-awareness" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>~ persist Emotions: I&#39;m a stressed, anxious student typing to understand.
+</code></pre></div>
+<p>And finally, some basic context examples.</p>
+<blockquote>
+<p>Caution: Most times when you interact with basic contexts, you'll want to use the <strong>~ drop</strong> command for various strategic reasons. Use caution when modifying these basic contexts. Replacing them is as easy as cutting and pasting text, but it might be troublesome to lose the contexts that track and preserve your session history.</p>
+</blockquote>
+<h4 id="session_progression">session_progression<a class="headerlink" href="#session_progression" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>~ drop session_progression
+</code></pre></div>
+<p>→ Perhaps because you have privacy concerns about preserving detailed history</p>
+<h4 id="key_technical_decisions">key_technical_decisions<a class="headerlink" href="#key_technical_decisions" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>~ drop key_technical_decisions
+</code></pre></div>
+<p>→ Perhaps because you're pivoting project direction entirely</p>
+<h4 id="deployment_readiness">deployment_readiness<a class="headerlink" href="#deployment_readiness" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>~ drop deployment_readiness
+</code></pre></div>
+<p>→ Perhaps because requirements changed significantly</p>
+<h4 id="current_status">current_status<a class="headerlink" href="#current_status" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>~ drop current_status
+</code></pre></div>
+<p>→ Perhaps because status is misleading after major changes</p>
+<p>Of course, there may be times when a simple <strong>~ update</strong> will suffice rather than a <strong>~ drop</strong>. On the other hand, the <strong>~ drop</strong> functionality gives you surgical control over what context carries forward versus what gets intentionally forgotten.</p>
+<h3 id="how-to-define-a-context">How to define a context<a class="headerlink" href="#how-to-define-a-context" title="Permanent link">&para;</a></h3>
+<p>Actually, there's no real science to it. Except for using the command triggers, it's kind of up to you and the AI as to what and how to define a context, soft or hard.</p>
+<p>A good example of this is the following context, which was created just to highlight the process for adding a context. The command entered was:
+    <code>~ persist Tone: Make your responses chirpy, positive, encouraging, and supportive</code>, which resulted in the following JSON:
+<div class="highlight"><pre><span></span><code>&quot;persistent_contexts&quot;: {
+   &quot;tone&quot;: &quot;chirpy, positive, encouraging, and supportive responses&quot;
+ }
+</code></pre></div></p>
+<p>Note that the structure of the command established "tone" as the first value in the <code>persistent_contexts</code> key.</p>
+<p>Then the context was removed with the command <code>~ drop the tone context</code>, which resulted in the following JSON:
+<div class="highlight"><pre><span></span><code>&quot;persistent_contexts&quot;: {},
+</code></pre></div></p>
+<p>Then the context persistence was attempted with an ambiguous prompt: <code>Please make your responses to me in a chirpy, positive, encouraging, and supportive manner</code>, which resulted in the following JSON:
+<div class="highlight"><pre><span></span><code>&quot;persistent_contexts&quot;: {},
+</code></pre></div></p>
+<p>Woah! What happened?!? Where's the context? Simple—this is a <em>temporary</em> context; it's not persisted because the AI wasn't told to persist it. In fact, the AI responded with the following:</p>
+<blockquote>
+<p>This is actually a perfect test case for ChatCon - you've just given me a direct instruction about communication style, but it's NOT going into the persistent contexts because you used natural language instead of the persist command. So this tone guidance will stay active for our current conversation, but it won't automatically carry forward to future ChatCon sessions unless you explicitly persist it.</p>
+</blockquote>
+<p>So let's try a properly formatted, yet still somewhat ambiguous prompt: <code>~ persist Please make your responses to me in a chirpy, positive, encouraging, and supportive manner</code>, and we're back to the following JSON:
+<div class="highlight"><pre><span></span><code>&quot;persistent_contexts&quot;: {
+   &quot;tone&quot;: &quot;chirpy, positive, encouraging, and supportive responses&quot;
+ }
+</code></pre></div></p>
+<p>So the lesson here is that the AI will figure out what you want and define the appropriate JSON as long as you're using the proper context command trigger.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
