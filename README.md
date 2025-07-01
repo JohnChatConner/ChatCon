@@ -26,7 +26,7 @@ After issuing a save command, the AI outputs a JSON "save" block, kind of like a
 
 ## Quick Start
 
-1. **Start a new chat:** Paste the ChatCon source block (see `chatcon-src-v1.0.json`) into the chat window
+1. **Start a new chat:** Paste the [ChatCon source block](https://github.com/JohnChatConner/ChatCon/blob/main/chatcon-src-v1.0.json) into the chat window and send it to the AI
 2. **Work normally:** Ask questions, write code, do whatever you're doing with the AI
 3. **Save before you run out of tokens:** Use `~sc` or `~hd` to generate a save output
 4. **Continue in a new chat:** Paste the entire save output into the chat window and keep going
