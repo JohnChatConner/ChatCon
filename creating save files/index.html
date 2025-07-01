@@ -1,0 +1,783 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A meta-prompt designed to maintain continuity between sessions.">
+      
+      
+        <meta name="author" content="JohnChatConner">
+      
+      
+      
+        <link rel="prev" href="../what%20does%20chatcon%20do/">
+      
+      
+        <link rel="next" href="../how%20to%20use%20chatcon/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Creating Save Files - ChatCon</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#em-emergency-save" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ChatCon" class="md-header__button md-logo" aria-label="ChatCon" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ChatCon
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Creating Save Files
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ChatCon" class="md-nav__button md-logo" aria-label="ChatCon" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ChatCon
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what%20does%20chatcon%20do/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What Does ChatCon Do?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Creating Save Files
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creating Save Files
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#em-emergency-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      EM (Emergency) Save
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sc-save-checkpoint-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      SC (Save Checkpoint) Save
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hd-high-detail-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      HD (High Detail) Save
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how%20to%20use%20chatcon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How To Use The ChatCon System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../making%20it%20your%20own/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Making It Your Own
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cool%20things/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cool Things To Do With ChatCon
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how%20to%20contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How To Contribute To ChatCon
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../credits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Credits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#em-emergency-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      EM (Emergency) Save
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sc-save-checkpoint-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      SC (Save Checkpoint) Save
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hd-high-detail-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      HD (High Detail) Save
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Creating Save Files</h1>
+
+<p>The whole purpose of ChatCon is to create context-bearing continuity notes—save files—that the AI can use to pick up right where you left off in a previous chat. ChatCon gives you three ways to create save files of varying levels of detail.</p>
+<h3 id="em-emergency-save">EM (Emergency) Save<a class="headerlink" href="#em-emergency-save" title="Permanent link">&para;</a></h3>
+<p>The EM command (<code>~ EM</code>) is a last-ditch command to grab the context of a chat when you are nearly out of tokens for the current session. For example, if you're interacting with the AI and it, all of a sudden, tells you to start a new chat because you're at the end of your token allowance, use the command <strong>~ EM</strong> to eke out a save file with just the few remaining tokens you have. Frankly, you might not even have enough to create a EM output, but, as I mentioned, it's a last-ditch option to grab the context and continue on to a new chat with continuity. The EM output might look like this: 
+<div class="highlight"><pre><span></span><code>{
+&quot;project&quot;: &quot;dinosaur_curriculum_birds&quot;,
+&quot;focus&quot;: &quot;bird-dinosaur connection evidence sequence&quot;,
+&quot;current_stage&quot;: &quot;6-step pedagogical progression developed&quot;,
+&quot;key_decisions&quot;: [&quot;step-by-step evidence building&quot;, &quot;start with observable birds&quot;, &quot;progress to fossils&quot;, &quot;end with &#39;birds are dinosaurs&#39;&quot;],
+&quot;next_steps&quot;: &quot;develop specific activities per step&quot;,
+&quot;user_context&quot;: &quot;5th grade teacher developing instruction&quot;,
+&quot;persistent_contexts&quot;: {
+&quot;tone&quot;: &quot;simple respectful explanations, accessible without talking down, open encouraging approach&quot;
+}
+}
+</code></pre></div></p>
+<p>This EM example was generated from a conversation with Claude.ai about dinosaurs and birds and their connections. You can even get the gist by reading the JSON. Note, however, the extreme concision of this block: This will maintain chat continuity in a new session, but only just. EM is an emergency command that will preserve context and maintain continuity, but it's pretty minimal.</p>
+<h3 id="sc-save-checkpoint-save">SC (Save Checkpoint) Save<a class="headerlink" href="#sc-save-checkpoint-save" title="Permanent link">&para;</a></h3>
+<p>The SC command (<code>~ SC</code>) captures more context than the EM and is a good middle-ground option for documenting the entire chat without capturing excessive detail about everything. The SC command will grab the context about everything discussed in the chat, but size-wise it's a middle-level save file between the EM (very minimal) and the HD (very maximal). Here's what a SC command might output:</p>
+<div class="highlight"><pre><span></span><code>{
+&quot;chatcon_type&quot;: &quot;SRC&quot;,
+&quot;system&quot;: &quot;ChatCon v0.5 - context preservation across AI chat sessions&quot;,
+&quot;version&quot;: &quot;0.5&quot;,
+&quot;commands&quot;: {
+&quot;~em&quot;: &quot;Emergency save (~40 tokens) - minimal context, NO SRC header - requires manual SRC prepending for restoration&quot;,
+&quot;~sc&quot;: &quot;Save Checkpoint (~200 tokens) - moderate detail project state with embedded SRC&quot;, 
+&quot;~hd&quot;: &quot;High Detail save (~500 tokens) - rich context with full progression tracking and embedded SRC&quot;,
+&quot;~src&quot;: &quot;Output this bootstrap reference for fresh AI sessions&quot;
+},
+&quot;soft_context_commands&quot;: {
+&quot;persist&quot;: &quot;~hd persist [type] - capture specified soft context and make persistent across sessions&quot;,
+&quot;update&quot;: &quot;~hd update [type] - refresh persistent soft context with current session analysis&quot;,
+&quot;drop&quot;: &quot;~hd drop [type] - remove persistence for specified context type&quot;,
+&quot;standard_types&quot;: [&quot;style&quot;, &quot;tone&quot;, &quot;dynamics&quot;, &quot;rapport&quot;],
+&quot;examples&quot;: [&quot;~hd persist style&quot;, &quot;~sc update tone&quot;, &quot;~hd drop dynamics&quot;]
+},
+&quot;usage_rules&quot;: [
+&quot;CRITICAL: SC and HD saves include embedded SRC and are self-contained&quot;,
+&quot;CRITICAL: EM saves are SRC-free for true emergency situations - manually prepend SRC for restoration&quot;,
+&quot;CRITICAL: AI must estimate tokens during generation and compress to 500 token hard limit&quot;,
+&quot;Commands are case-insensitive and space-tolerant: ~HD = ~hd = ~ hd = ~ HD etc&quot;,
+&quot;Commands work via implicit recognition - AI detects and responds automatically&quot;,
+&quot;SRC provides bootstrap knowledge so fresh AI understands the system&quot;,
+&quot;EM saves sacrifice self-containment for absolute minimal token usage&quot;,
+&quot;Soft context commands can be added to any save: ~hd persist style, ~sc update tone&quot;,
+&quot;Persistent contexts auto-carry forward in all subsequent saves until dropped&quot;
+],
+&quot;save_protocols&quot;: {
+&quot;em_protocol&quot;: &quot;Minimal JSON without SRC - emergency use only when tokens critically low&quot;,
+&quot;sc_protocol&quot;: &quot;Moderate detail with full embedded SRC - self-contained&quot;,
+&quot;hd_protocol&quot;: &quot;Full detail with full embedded SRC - self-contained&quot;
+},
+&quot;persistent_context_protocol&quot;: {
+&quot;persist&quot;: &quot;capture specified soft context and auto-include in future saves&quot;,
+&quot;update&quot;: &quot;refresh persistent soft context with current session analysis&quot;, 
+&quot;drop&quot;: &quot;remove persistence for specified context type&quot;,
+&quot;standard_types&quot;: &quot;style (communication patterns), tone (emotional quality), dynamics (interaction patterns), rapport (relationship quality)&quot;,
+&quot;auto_carry&quot;: &quot;persistent contexts automatically included in all subsequent saves until dropped&quot;,
+&quot;interpretation&quot;: &quot;AI should interpret non-standard user requests and map to standard types or create appropriate custom categories&quot;,
+&quot;confirmation&quot;: &quot;AI should confirm what persistent context was captured for user learning&quot;
+},
+&quot;project_state&quot;: {
+&quot;project&quot;: &quot;dinosaur_curriculum_development&quot;,
+&quot;user_role&quot;: &quot;5th_grade_teacher&quot;,
+&quot;focus&quot;: &quot;bird_dinosaur_connection&quot;,
+&quot;current_stage&quot;: &quot;pedagogical_sequence_developed&quot;,
+&quot;key_discussions&quot;: [
+&quot;evidence_for_bird_dinosaur_relationship&quot;,
+&quot;scientific_consensus_strength&quot;,
+&quot;6_step_teaching_progression&quot;
+],
+&quot;teaching_sequence&quot;: {
+&quot;step1&quot;: &quot;observe_living_birds_baseline&quot;,
+&quot;step2&quot;: &quot;introduce_dinosaur_skeleton_mystery&quot;,
+&quot;step3&quot;: &quot;archaeopteryx_transitional_fossil&quot;,
+&quot;step4&quot;: &quot;feathered_dinosaurs_china&quot;,
+&quot;step5&quot;: &quot;behavioral_evidence_nesting&quot;,
+&quot;step6&quot;: &quot;birds_are_dinosaurs_revelation&quot;
+},
+&quot;next_development&quot;: &quot;specific_activities_per_step&quot;,
+&quot;persistent_contexts&quot;: {
+&quot;tone&quot;: &quot;simple respectful explanations without talking down, accessible clear language, open encouraging teaching approach&quot;
+}
+}
+}
+</code></pre></div>
+<p>Take a closer look at this output—a good deal of it is something you've seen before: the SRC source file! The actual save file begins with the key <code>project_state</code>. Putting the source block at the top of the save file was done on purpose, but it <strong>wasn't</strong> done with the EM output, for good reason.</p>
+<p>If you're running low on tokens, the last thing you need is an output that uses <em>even more</em> tokens, which is exactly what including the source file at the top of the EM output would have done. ChatCon is designed to <strong>not</strong> include the source output at the top of the EM save file, but <strong>does</strong> include the source file at the top of the GC and HD save files. But why?</p>
+<p>ChatCon is supposed to be a self-documenting continuity system, so it should be made as easy as possible to continue with the chat. Adding the source to the top of the save means <strong><em>you</em></strong> don't have to copy and paste the source into the AI and <em>then</em> copy and paste (again!) the save file into the AI. When you make a GC or HD save, just copy and paste the entire GC or HD JSON output into the AI and keep moving.</p>
+<h3 id="hd-high-detail-save">HD (High Detail) Save<a class="headerlink" href="#hd-high-detail-save" title="Permanent link">&para;</a></h3>
+<p>The HD output (<code>~ HD</code>) is of even higher fidelity than the GC output and, according to AI testing, captures about 95% of the entire session. The remaining 5% consists of, in the AI's estimation, emotional connotations and tone of voice. Not that that's not important! But this version of ChatCon was designed for continuity of software coding sessions, so chasing that remaining 5% seemed not to be of enough value to justify the token cost.</p>
+<blockquote>
+<p>If this 5% is of value to you (and it may be—see <a href="../cool%20things/">Cool Things You Can Do With ChatCon</a>), you can permanently edit the <code>.SRC</code> source block with specific commands to carry these "soft contexts" through your chat. See <a href="../making%20it%20your%20own/">Making It Your Own</a> for instructions as to how to modify the output rules to include those aspects of the chat.</p>
+</blockquote>
+<p>ChatCon was intended to be a low-token use system, but the HD command can really push the concept of "low token." Here's an example of an HD save (with, of course, the source block prepended to the save output):
+<div class="highlight"><pre><span></span><code>{
+ &quot;chatcon_type&quot;: &quot;SRC&quot;,
+ &quot;system&quot;: &quot;ChatCon v1.2 - context preservation across AI chat sessions&quot;,
+ &quot;commands&quot;: {
+   &quot;|em&quot;: &quot;Emergency save (~40 tokens) - minimal context, NO SRC header - requires manual SRC prepending for restoration&quot;,
+   &quot;|sc&quot;: &quot;Save Checkpoint (~200 tokens) - moderate detail project state with embedded SRC&quot;, 
+   &quot;|hd&quot;: &quot;High Detail save (~500 tokens) - rich context with full progression tracking and embedded SRC&quot;,
+   &quot;|src&quot;: &quot;Output this bootstrap reference for fresh AI sessions&quot;
+ },
+ &quot;soft_context_commands&quot;: {
+   &quot;persist&quot;: &quot;|hd persist [type] - capture specified soft context and make persistent across sessions&quot;,
+   &quot;update&quot;: &quot;|hd update [type] - refresh persistent soft context with current session analysis&quot;,
+   &quot;drop&quot;: &quot;|hd drop [type] - remove persistence for specified context type&quot;,
+   &quot;standard_types&quot;: [&quot;style&quot;, &quot;tone&quot;, &quot;dynamics&quot;, &quot;rapport&quot;],
+   &quot;examples&quot;: [&quot;|hd persist style&quot;, &quot;|sc update tone&quot;, &quot;|hd drop dynamics&quot;]
+ },
+ &quot;usage_rules&quot;: [
+   &quot;CRITICAL: SC and HD saves include embedded SRC and are self-contained&quot;,
+   &quot;CRITICAL: EM saves are SRC-free for true emergency situations - manually prepend SRC for restoration&quot;,
+   &quot;CRITICAL: AI must estimate tokens during generation and compress to 500 token hard limit&quot;,
+   &quot;Commands are case-insensitive and space-tolerant: |HD = |hd = | hd = | HD etc&quot;,
+   &quot;Commands work via implicit recognition - AI detects and responds automatically&quot;,
+   &quot;SRC provides bootstrap knowledge so fresh AI understands the system&quot;,
+   &quot;EM saves sacrifice self-containment for absolute minimal token usage&quot;,
+   &quot;Soft context commands can be added to any save: |hd persist style, |sc update tone&quot;,
+   &quot;Persistent contexts auto-carry forward in all subsequent saves until dropped&quot;
+ ],
+ &quot;save_protocols&quot;: {
+   &quot;em_protocol&quot;: &quot;Minimal JSON without SRC - emergency use only when tokens critically low&quot;,
+   &quot;sc_protocol&quot;: &quot;Moderate detail with full embedded SRC - self-contained&quot;,
+   &quot;hd_protocol&quot;: &quot;Full detail with full embedded SRC - self-contained&quot;
+ },
+ &quot;persistent_context_protocol&quot;: {
+   &quot;persist&quot;: &quot;capture specified soft context and auto-include in future saves&quot;,
+   &quot;update&quot;: &quot;refresh persistent soft context with current session analysis&quot;, 
+   &quot;drop&quot;: &quot;remove persistence for specified context type&quot;,
+   &quot;standard_types&quot;: &quot;style (communication patterns), tone (emotional quality), dynamics (interaction patterns), rapport (relationship quality)&quot;,
+   &quot;auto_carry&quot;: &quot;persistent contexts automatically included in all subsequent saves until dropped&quot;,
+   &quot;interpretation&quot;: &quot;AI should interpret non-standard user requests and map to standard types or create appropriate custom categories&quot;,
+   &quot;confirmation&quot;: &quot;AI should confirm what persistent context was captured for user learning&quot;
+ },
+ &quot;compression_guidelines&quot;: {
+   &quot;hd_target&quot;: &quot;~500 tokens for optimal efficiency&quot;,
+   &quot;compression_trigger&quot;: &quot;when HD save exceeds ~800 tokens, compress automatically&quot;,
+   &quot;compression_method&quot;: &quot;preserve critical insights and current state, compress session_progression to key milestones only&quot;,
+   &quot;maintain_context&quot;: &quot;enough detail for seamless restoration without bloat&quot;,
+   &quot;priority_order&quot;: &quot;current_focus &gt; key_decisions &gt; critical_insights &gt; compressed_progression &gt; persistent_contexts&quot;
+ },
+ &quot;formats&quot;: {
+   &quot;session_start&quot;: &quot;Paste SRC alone to initialize ChatCon knowledge&quot;,
+   &quot;project_continue_sc_hd&quot;: &quot;Paste SC or HD save directly - they contain embedded SRC&quot;,
+   &quot;project_continue_em&quot;: &quot;Paste SRC + EM save together - EM saves are not self-contained&quot;,
+   &quot;emergency_save&quot;: &quot;|em produces minimal context without SRC overhead&quot;,
+   &quot;checkpoint_save&quot;: &quot;|sc produces moderate detail state with full embedded SRC&quot;,
+   &quot;full_save&quot;: &quot;|hd produces comprehensive context with full embedded SRC&quot;,
+   &quot;soft_context_saves&quot;: &quot;Add persist/update/drop commands to any save for soft context management&quot;
+ },
+ &quot;architecture&quot;: &quot;SRC (system knowledge) + saves (project state) + persistent soft contexts = complete session independence. EM saves trade self-containment for emergency efficiency.&quot;,
+ &quot;key_principle&quot;: &quot;Context preservation &gt; token efficiency, except in true emergency (EM) where minimal preservation &gt; comprehensive context. Persistent soft contexts maintain relationship continuity across sessions.&quot;
+}
+
+{
+ &quot;chatcon_type&quot;: &quot;HD&quot;,
+ &quot;project&quot;: &quot;ChatCon v1.2 space-tolerant command protocol implementation&quot;,
+ &quot;current_focus&quot;: &quot;validated space-tolerant pipe commands and finalized user-friendly protocol&quot;,
+ &quot;session_progression&quot;: [
+   {&quot;milestone&quot;: &quot;compression protocol optimization&quot;, &quot;key_decision&quot;: &quot;added CRITICAL compression rule to prevent bloated saves&quot;},
+   {&quot;milestone&quot;: &quot;space tolerance requirement identified&quot;, &quot;key_decision&quot;: &quot;recognized readability issues with tight pipe commands&quot;},
+   {&quot;milestone&quot;: &quot;space-tolerant protocol implemented&quot;, &quot;key_decision&quot;: &quot;updated SRC to accept | hd alongside |hd variants&quot;}
+ ],
+ &quot;current_status&quot;: &quot;ChatCon v1.2 complete with space-tolerant commands - system now accepts both |hd and | hd formats for maximum usability&quot;,
+ &quot;critical_insights&quot;: [
+   &quot;space tolerance critical for documentation readability and user adoption&quot;,
+   &quot;command flexibility reduces user friction without compromising functionality&quot;,
+   &quot;SRC updates successfully validated through live command testing&quot;
+ ],
+ &quot;persistent_contexts&quot;: {},
+ &quot;next_session_context&quot;: &quot;ChatCon v1.2 finalized with enhanced usability - space-tolerant commands and reliable compression make system production-ready&quot;
+}
+</code></pre></div></p>
+<p>Yeah, it's big. Even if you account for the size of the source block, this is still a big save file. The main culprit is often the <code>session_progression</code> array, which can contain a lot of information. It's highly informative and contains a lot of context (and the testing AIs loved it for its comprehensive coverage), but it can get heavy.</p>
+<p>To alleviate the HD bloat and keep the token count to a manageable 500 tokens or so, the source block contains compression guidance when things start to bloat:</p>
+<p><strong>Compression guidance:</strong></p>
+<ul>
+<li>HD saves will target approximately 500 tokens for optimal efficiency</li>
+<li>When HD exceeds approximately 800 tokens, compress <code>session_progression</code> to key milestones only</li>
+<li>Preserve critical insights and current state, summarize historical detail</li>
+<li>Maintain enough context for seamless restoration without bloat</li>
+</ul>
+<p>And, in the words of Claude.ai:</p>
+<blockquote>
+<p>This is actually a great example of the system being self-documenting and self-correcting.</p>
+</blockquote>
+<p>So the priorities for the HD output are: Current focus &gt; key decisions &gt; critical insights &gt; compressed progression. This makes the system self-maintaining. Any AI loading the source will know to keep HD saves appropriately sized while preserving essential context.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
